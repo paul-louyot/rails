@@ -712,6 +712,12 @@ video.preview(resize_to_limit: [100, 100])
 video.preview(resize_to_fill: [100, 100])
 ```
 
+### Action View `form_with` generates non-remote forms by default
+
+`form_with` would generate a remote form by default. This would confuse users because they were forced to handle remote requests.
+
+All new 6.1 applications will generate non-remote forms by default. When upgrading a 6.0 application you can enable remote forms by default by setting `config.action_view.form_with_generates_remote_forms` to true.
+
 Upgrading from Rails 5.2 to Rails 6.0
 -------------------------------------
 
